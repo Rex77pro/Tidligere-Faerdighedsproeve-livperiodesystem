@@ -4,7 +4,7 @@ namespace Tidligere_Færdighedsprøve_livperiodesystem
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             //Aktivitet A1 = new Aktivitet(1, 12, 18, new DateTime(2022, 5, 15, 14, 30, 0), new DateTime(2022, 5, 15, 18, 0, 0));
             //Console.WriteLine(A1);
@@ -17,10 +17,10 @@ namespace Tidligere_Færdighedsprøve_livperiodesystem
                 Console.WriteLine(katalog);
                 Console.WriteLine();
 
-                katalog.DeleteActivity(1);
+                katalog.DeleteActivity(katalog.Aktiviteter[1]);
                 Console.WriteLine(katalog);
                 Console.WriteLine();
-                katalog.AddActivity(new Aktivitet(1, 12, 15, new DateTime(2022, 5, 15, 14, 30, 0), new DateTime(2022, 5, 15, 12, 0, 0)));
+                katalog.AddActivity(1 , new Aktivitet(1, 12, 15, new DateTime(2022, 5, 15, 14, 30, 0), new DateTime(2022, 5, 15, 16, 45, 0)));
                 // new Aktivitet(ID, MinimumAlder, MaksAlder, new DateTime(År, Måned, Dag, Time, Minut, Sekund)
                 Console.WriteLine(katalog);
             }
@@ -29,6 +29,7 @@ namespace Tidligere_Færdighedsprøve_livperiodesystem
                 Console.WriteLine(ex.Message);
                 Console.WriteLine();
             }
+            
 
             Console.WriteLine();
             Console.WriteLine("Press key to continue");
